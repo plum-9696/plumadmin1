@@ -29,8 +29,7 @@
     "topthink/think-worker": "^3.0",
     "ext-json": "*",
     "workerman/redis-queue": "^1.0",
-    "ext-posix": "*",
-    "ext-pcntl": "*"
+    "phpoffice/phpspreadsheet": "^1.18"
   },
   "require-dev": {
     "symfony/var-dumper": "^4.2",

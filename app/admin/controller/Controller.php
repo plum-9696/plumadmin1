@@ -49,7 +49,7 @@ class Controller extends BaseController
     public function checkPermission()
     {
         //超级管理员不需要校验
-        if (!in_array($this->action, $this->whiteList) || ($this->admin && config('plum.super_id') !== $this->admin->id)) {
+        if (!in_array($this->action, $this->whiteList) && ($this->admin && config('plum.super_id') !== $this->admin->id)) {
             //获取当前路由方法
             $rule = AdminModel::getRule($this->admin->id)->toArray();
             $perms = array_values(array_filter($rule, function ($item) {
